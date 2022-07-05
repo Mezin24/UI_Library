@@ -61,3 +61,40 @@ $.prototype.find = function (selector) {
   this.length = Object.keys(this).length;
   return this;
 };
+
+$.prototype.closest = function (selector) {
+  let counter = 0;
+
+  for (let i = 0; i < this.length; i++) {
+    if (this[i].closest(selector)) {
+      this[counter++] = this[i].closest(selector);
+    }
+  }
+
+  const objLength = Object.keys(this).length;
+
+  for (; counter < this.length; counter++) {
+    delete this[counter];
+  }
+
+  return this;
+};
+
+$.prototype.sibilings = function () {
+  const parent = this[0].parentNode;
+  const children = parent.children;
+  let counter = 0;
+
+  const filtered = [...children].filter((el) => el !== this[0]);
+
+  for (; counter < filtered.length; counter++) {
+    this[counter] = filtered[counter];
+  }
+
+  for (; counter < this.length; counter++) {
+    delete this[counter];
+  }
+  this.length = filtered.length;
+
+  return this;
+};
