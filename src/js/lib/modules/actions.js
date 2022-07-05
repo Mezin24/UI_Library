@@ -1,32 +1,63 @@
 import $ from '../core';
 
-$.prototype.click = function (callback) {
+$.prototype.html = function (content) {
   for (let i = 0; i < this.length; i++) {
-    if (callback) {
-      this[i].addEventListener('click', callback);
+    if (content) {
+      this[i].innerHTML = content;
     } else {
-      this[i].click();
+      return this[i].innerHTML;
     }
   }
+
   return this;
 };
 
-$.prototype.on = function (action, callback) {
-  if (!action || !callback) {
+$.prototype.eq = function (num) {
+  if (!num) {
     return this;
   }
-  for (let i = 0; i < this.length; i++) {
-    this[i].addEventListener(action, callback);
+
+  const el = this[num];
+  const objLength = Object.keys(this).length;
+
+  for (let i = 0; i < objLength; i++) {
+    delete this[i];
   }
+
+  this[0] = el;
+  this.length = 1;
+
   return this;
 };
 
-$.prototype.off = function (action, callback) {
-  if (!action || !callback) {
-    return this;
+$.prototype.index = function () {
+  const parendNode = this[0].parentNode;
+
+  return [...parendNode.children].findIndex((el) => el === this[0]);
+};
+
+$.prototype.find = function (selector) {
+  let counter = 0;
+
+  const copyObj = Object.assign({}, this);
+
+  for (let i = 0; i < copyObj.length; i++) {
+    const arr = copyObj[i].querySelectorAll(selector);
+
+    if (arr.length === 0) {
+      continue;
+    }
+
+    for (let j = 0; j < arr.length; j++) {
+      this[counter] = arr[j];
+      counter++;
+    }
   }
-  for (let i = 0; i < this.length; i++) {
-    this[i].removeEventListener(action, callback);
+
+  for (; counter < this.length; counter++) {
+    delete this[counter];
   }
+
+  this.length = Object.keys(this).length;
   return this;
 };
