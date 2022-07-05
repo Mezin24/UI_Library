@@ -1,0 +1,15 @@
+
+
+* {
+  color: #fff;
+}
+
+body {
+  background-color: rgb(45, 92, 133);
+}
+
+@import 'btn';
+
+.active {
+  color: red
+}
