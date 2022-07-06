@@ -10,6 +10,7 @@ $.prototype.init = function (selector) {
   if (selector.tagName) {
     this[0] = selector;
     this.length = 1;
+    return this;
   }
 
   Object.assign(this, document.querySelectorAll(selector));
