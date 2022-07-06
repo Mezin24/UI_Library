@@ -37,6 +37,7 @@ $.prototype.index = function () {
 };
 
 $.prototype.find = function (selector) {
+  let numberOfitems = 0;
   let counter = 0;
 
   const copyObj = Object.assign({}, this);
@@ -52,13 +53,18 @@ $.prototype.find = function (selector) {
       this[counter] = arr[j];
       counter++;
     }
+
+    numberOfitems += arr.length;
   }
 
-  for (; counter < this.length; counter++) {
-    delete this[counter];
+  this.length = numberOfitems;
+
+  const objLength = Object.keys(this).length;
+
+  for (; numberOfitems < objLength; numberOfitems++) {
+    delete this[numberOfitems];
   }
 
-  this.length = Object.keys(this).length;
   return this;
 };
 
