@@ -1,15 +1,6 @@
+@import './general/base';
+@import './general/variables';
+@import './general/typography';
+@import './components/ui';
+@import './helpers/classes';
 
-
-* {
-  color: #fff;
-}
-
-body {
-  background-color: rgb(45, 92, 133);
-}
-
-@import 'btn';
-
-.active {
-  color: red
-}

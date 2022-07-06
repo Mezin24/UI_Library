@@ -1,0 +1,41 @@
+.fz-16 {
+  font-size: 16px;
+}
+.fz-20 {
+  font-size: 20px;
+}
+.fz-24 {
+  font-size: 24px;
+}
+.fz-32 {
+  font-size: 32px;
+}
+.fz-40 {
+  font-size: 40px;
+}
+
+.bold {
+  font-weight: bold;
+}
+.thin {
+  font-weight: 300;
+}
+.italic {
+  font-weight: italic;
+}
+
+.text-primary {
+  color: $clr-primary;
+}
+.text-success {
+  color: $clr-success;
+}
+.text-warning {
+  color: $clr-warning;
+}
+.text-danger {
+  color: $clr-danger;
+}
+.text-dark {
+  color: $clr-dark;
+}

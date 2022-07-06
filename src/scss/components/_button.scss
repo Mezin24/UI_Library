@@ -1,0 +1,124 @@
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid $clr-primary;background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $clr-dark;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: lighten($clr-primary, 10%);
+    color: #fff;
+  }
+
+
+  &-primary {
+    border-color: $clr-primary;
+    background-color: $clr-primary;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($clr-primary, 10%);
+      color: #fff;
+    }
+  }
+
+  &-success {
+    border-color: $clr-success;
+    background-color: $clr-success;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($clr-success, 10%);
+      color: #fff;
+    }
+  }
+
+  &-danger {
+    border-color: $clr-danger;
+    background-color: $clr-danger;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($clr-danger, 10%);
+      color: #fff;
+    }
+  }
+
+  &-warning {
+    border-color: $clr-warning;
+    background-color: $clr-warning;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($clr-warning, 10%);
+      color: #fff;
+    }
+  }
+
+  &-dark {
+    border-color: $clr-dark;
+    background-color: $clr-dark;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($clr-dark, 10%);
+      color: #fff;
+    }
+  }
+
+  &-outline-dark {
+    border-color: $clr-dark;
+    color: $clr-dark;
+
+    &:hover {
+      background-color: $clr-dark;
+    }
+  }
+
+  &-outline-primary {
+    border-color: $clr-primary;
+    color: $clr-primary;
+
+    &:hover {
+      background-color: $clr-primary;
+    }
+  }
+
+  &-outline-success {
+    border-color: $clr-success;
+    color: $clr-success;
+
+    &:hover {
+      background-color: $clr-success;
+    }
+  }
+
+  &-outline-danger {
+    border-color: $clr-danger;
+    color: $clr-danger;
+
+    &:hover {
+      background-color: $clr-danger;
+    }
+  }
+
+  &-outline-warning {
+    border-color: $clr-warning;
+    color: $clr-warning;
+
+    &:hover {
+      background-color: $clr-warning;
+    }
+  }
+  &-block {
+    display: block;
+    width: 100%;
+  }
+}

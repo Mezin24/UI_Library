@@ -13,7 +13,7 @@ $.prototype.html = function (content) {
 };
 
 $.prototype.eq = function (num) {
-  if (!num) {
+  if (typeof num === 'undefined') {
     return this;
   }
 
