@@ -9,5 +9,6 @@ import './components/dropdown';
 import './components/modal';
 import './components/tabs';
 import './components/accordion';
+import './services/request';
 
 export default $;

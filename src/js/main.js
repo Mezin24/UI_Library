@@ -15,3 +15,7 @@ $('#trigger').click(function (e) {
     },
   });
 });
+
+$()
+  .get('https://jsonplaceholder.typicode.com/posts')
+  .then((res) => console.log(res));
