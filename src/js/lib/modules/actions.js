@@ -37,15 +37,14 @@ $.prototype.index = function () {
 };
 
 $.prototype.find = function (selector) {
-  let numberOfitems = 0;
+  let numberOfItems = 0;
   let counter = 0;
 
   const copyObj = Object.assign({}, this);
 
   for (let i = 0; i < copyObj.length; i++) {
     const arr = copyObj[i].querySelectorAll(selector);
-
-    if (arr.length === 0) {
+    if (arr.length == 0) {
       continue;
     }
 
@@ -54,15 +53,14 @@ $.prototype.find = function (selector) {
       counter++;
     }
 
-    numberOfitems += arr.length;
+    numberOfItems += arr.length;
   }
 
-  this.length = numberOfitems;
+  this.length = numberOfItems;
 
   const objLength = Object.keys(this).length;
-
-  for (; numberOfitems < objLength; numberOfitems++) {
-    delete this[numberOfitems];
+  for (; numberOfItems < objLength; numberOfItems++) {
+    delete this[numberOfItems];
   }
 
   return this;
