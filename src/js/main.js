@@ -17,5 +17,5 @@ $('#trigger').click(function (e) {
 });
 
 $()
-  .get('https://jsonplaceholder.typicode.com/posts')
+  .get('https://jsonplaceholder.typicode.com/users')
   .then((res) => console.log(res));

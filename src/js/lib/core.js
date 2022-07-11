@@ -4,7 +4,7 @@ const $ = function (selector) {
 
 $.prototype.init = function (selector) {
   if (!selector) {
-    return {};
+    return this;
   }
 
   if (selector.tagName) {
