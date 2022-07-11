@@ -2,11 +2,10 @@
   "name": "js-lib",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
+    "build": "parcel build src/index.html --public-url ./",
     "watch": "parcel src/index.html --open chrome --port 3000"
   },
   "keywords": [],
